@@ -11,30 +11,34 @@
       }
       
       .hero-project {
-        min-height: calc(100vh - 200px);
+        min-height: calc(100vh - 300px);
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 60px 20px;
+        padding: 60px 20px 120px;
       }
       
       .hero-project-wrapper {
         max-width: 1400px;
         width: 100%;
         margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
       }
       
-      .hero-project a {
+      .hero-project-image a {
         display: block;
         text-decoration: none;
         transition: opacity 0.3s ease;
       }
       
-      .hero-project a:hover {
+      .hero-project-image a:hover {
         opacity: 0.95;
       }
       
-      .hero-project img {
+      .hero-project-image img {
         width: 100%;
         height: auto;
         display: block;
@@ -42,10 +46,33 @@
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
       }
       
+      .hero-project-text {
+        font-size: 120px;
+        font-weight: 700;
+        letter-spacing: -3px;
+        color: #1a1a1a;
+        line-height: 1.1;
+      }
+      
+      @media (max-width: 1024px) {
+        .hero-project-wrapper {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        
+        .hero-project-text {
+          font-size: 80px;
+        }
+      }
+      
       @media (max-width: 768px) {
         .hero-project {
           min-height: auto;
-          padding: 40px 20px;
+          padding: 40px 20px 80px;
+        }
+        
+        .hero-project-text {
+          font-size: 60px;
         }
       }
     </style>
@@ -76,9 +103,14 @@
     <main>
       <section class="hero-project" aria-label="Featured project">
         <div class="hero-project-wrapper">
-          <a href="project-a-detail.html">
-            <img src="assets/images/project-a.jpg" alt="Project A">
-          </a>
+          <div class="hero-project-image">
+            <a href="project-a-detail.html">
+              <img src="assets/images/project-a.jpg" alt="Project A">
+            </a>
+          </div>
+          <div class="hero-project-text">
+            CTE Pack
+          </div>
         </div>
       </section>
     </main>
