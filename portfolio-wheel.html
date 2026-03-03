@@ -246,8 +246,24 @@
         const bar = document.getElementById('wheel-category-bar');
         if (!header || !bar) return;
 
+        header.style.position = 'fixed';
+        header.style.top = '0';
+        header.style.left = '0';
+        header.style.right = '0';
+        header.style.width = '100%';
+        header.style.zIndex = '3000';
+
+        bar.style.position = 'fixed';
+        bar.style.left = '0';
+        bar.style.right = '0';
+        bar.style.width = '100%';
+        bar.style.display = 'flex';
+        bar.style.zIndex = '2999';
+
         const headerHeight = Math.ceil(header.getBoundingClientRect().height);
         const barHeight = Math.ceil(bar.getBoundingClientRect().height);
+
+        bar.style.top = `${headerHeight}px`;
 
         document.documentElement.style.setProperty('--wheel-header-h', `${headerHeight}px`);
         document.documentElement.style.setProperty('--wheel-bar-h', `${barHeight}px`);
@@ -276,7 +292,10 @@
         });
       }
       
-      window.addEventListener('scroll', updateCategoryBar);
+      window.addEventListener('scroll', () => {
+        syncWheelOffsets();
+        updateCategoryBar();
+      });
       window.addEventListener('resize', syncWheelOffsets);
       window.addEventListener('load', syncWheelOffsets);
       document.addEventListener('DOMContentLoaded', () => {
