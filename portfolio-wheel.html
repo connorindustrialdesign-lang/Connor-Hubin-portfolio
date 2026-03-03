@@ -6,58 +6,52 @@
     <title>Portfolio — Connor Hubin</title>
     <link rel="stylesheet" href="styles.css?v=20260227-50">
     <style>
+      :root {
+        --wheel-header-h: 88px;
+        --wheel-bar-h: 64px;
+      }
+
       body[data-page="portfolio-wheel"] {
         background: #fafaf8;
-        padding-top: 128px;
-        overflow-x: hidden !important;
-        overflow-y: auto !important;
+        padding-top: calc(var(--wheel-header-h) + var(--wheel-bar-h));
+        overflow-x: hidden;
       }
-      
-      body[data-page="portfolio-wheel"] .category-bar {
-        position: fixed !important;
-        top: 64px !important;
-        left: 0 !important;
-        right: 0 !important;
-        width: 100% !important;
-        z-index: 10000 !important;
-        display: flex !important;
-        pointer-events: auto !important;
-      }
-      
+
       body[data-page="portfolio-wheel"] .site-header {
-        position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        z-index: 9999 !important;
-        pointer-events: auto !important;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 3000;
+        background: #fff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
       }
-      
+
+      body[data-page="portfolio-wheel"] .category-bar {
+        position: fixed;
+        top: var(--wheel-header-h);
+        left: 0;
+        right: 0;
+        height: var(--wheel-bar-h);
+        z-index: 2999;
+      }
+
       body[data-page="portfolio-wheel"] main {
         min-height: 100vh;
-        position: relative;
-        z-index: 1;
-        overflow: visible !important;
       }
-      
+
       body[data-page="portfolio-wheel"] .grid {
-        height: auto !important;
-        overflow: visible !important;
-        flex: none !important;
+        height: auto;
+        flex: none;
       }
-      
-      body[data-page="portfolio-wheel"] .portfolio {
-        height: auto !important;
-        overflow: visible !important;
-      }
-      
+
       .hero-project {
         min-height: calc(100vh - 300px);
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 60px 20px 120px;
-        overflow: visible !important;
       }
       
       .hero-project-wrapper {
@@ -68,7 +62,6 @@
         grid-template-columns: 1fr 1fr;
         gap: 80px;
         align-items: end;
-        overflow: visible !important;
       }
       
       .hero-project-image {
@@ -84,13 +77,12 @@
       }
       
       .category-section { 
-        scroll-margin-top: 128px;
-        overflow: visible !important;
+        scroll-margin-top: calc(var(--wheel-header-h) + var(--wheel-bar-h) + 12px);
       }
     </style>
   </head>
-  <body data-page="portfolio-wheel" style="overflow-x: hidden;">
-    <header class="site-header" style="position: fixed !important; top: 0 !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 9999 !important; background: #fff !important; padding: 20px 0 !important; box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;">
+  <body data-page="portfolio-wheel">
+    <header class="site-header" id="wheel-header">
       <div class="header-inner container">
         <h1 class="site-name"><a href="index.html">Connor Hubin</a></h1>
         <nav class="header-nav">
@@ -105,16 +97,16 @@
       </div>
     </header>
 
-    <nav class="category-bar" style="position: fixed !important; top: 64px !important; left: 0 !important; right: 0 !important; width: 100% !important; z-index: 10000 !important; display: flex !important; justify-content: space-between !important; align-items: center !important; height: 64px !important; background: #000 !important;" aria-label="Top categories">
-      <a href="#industrial-design" data-category="industrial-design" style="flex: 1; text-align: center; text-decoration: none; color: #fff; font-weight: 400; padding: 0 10px; font-size: clamp(16px, 2.5vw, 24px); line-height: 64px; position: relative; transition: color 0.2s, border-color 0.2s; font-family: 'Space Grotesk', sans-serif; border-bottom: 3px solid transparent;">Industrial Design</a>
-      <a href="#engineering" data-category="engineering" style="flex: 1; text-align: center; text-decoration: none; color: #fff; font-weight: 400; padding: 0 10px; font-size: clamp(16px, 2.5vw, 24px); line-height: 64px; position: relative; transition: color 0.2s, border-color 0.2s; font-family: 'Space Grotesk', sans-serif; border-bottom: 3px solid transparent;">Engineering</a>
-      <a href="#fabrication" data-category="fabrication" style="flex: 1; text-align: center; text-decoration: none; color: #fff; font-weight: 400; padding: 0 10px; font-size: clamp(16px, 2.5vw, 24px); line-height: 64px; position: relative; transition: color 0.2s, border-color 0.2s; font-family: 'Space Grotesk', sans-serif; border-bottom: 3px solid transparent;">Fabrication</a>
-      <a href="#fine-arts" data-category="fine-arts" style="flex: 1; text-align: center; text-decoration: none; color: #fff; font-weight: 400; padding: 0 10px; font-size: clamp(16px, 2.5vw, 24px); line-height: 64px; position: relative; transition: color 0.2s, border-color 0.2s; font-family: 'Space Grotesk', sans-serif; border-bottom: 3px solid transparent;">Fine Arts</a>
+    <nav class="category-bar" id="wheel-category-bar" aria-label="Top categories">
+      <a href="#industrial-design" data-category="industrial-design">Industrial Design</a>
+      <a href="#engineering" data-category="engineering">Engineering</a>
+      <a href="#fabrication" data-category="fabrication">Fabrication</a>
+      <a href="#fine-arts" data-category="fine-arts">Fine Arts</a>
     </nav>
 
-    <main style="position: relative; z-index: 1; width: 100%;">
+    <main>
       <!-- INDUSTRIAL DESIGN SECTION -->
-      <section class="category-section" id="industrial-design" data-category="industrial-design" style="position: relative; z-index: 1;">
+      <section class="category-section" id="industrial-design" data-category="industrial-design">
         <section class="hero-project" aria-label="Industrial Design featured project">
           <div class="hero-project-wrapper">
             <div class="hero-project-image">
@@ -149,7 +141,7 @@
       </section>
 
       <!-- ENGINEERING SECTION -->
-      <section class="category-section" id="engineering" data-category="engineering" style="position: relative; z-index: 1;">
+      <section class="category-section" id="engineering" data-category="engineering">
         <section class="hero-project" aria-label="Engineering featured project">
           <div class="hero-project-wrapper">
             <div class="hero-project-image">
@@ -192,7 +184,7 @@
       </section>
 
       <!-- FABRICATION SECTION -->
-      <section class="category-section" id="fabrication" data-category="fabrication" style="position: relative; z-index: 1;">
+      <section class="category-section" id="fabrication" data-category="fabrication">
         <section class="hero-project" aria-label="Fabrication featured project">
           <div class="hero-project-wrapper">
             <div class="hero-project-image">
@@ -220,7 +212,7 @@
       </section>
 
       <!-- FINE ARTS SECTION -->
-      <section class="category-section" id="fine-arts" data-category="fine-arts" style="position: relative; z-index: 1;">
+      <section class="category-section" id="fine-arts" data-category="fine-arts">
         <section class="hero-project" aria-label="Fine Arts featured project">
           <div class="hero-project-wrapper">
             <div class="hero-project-image">
@@ -249,6 +241,18 @@
 
     <script src="script.js"></script>
     <script>
+      function syncWheelOffsets() {
+        const header = document.getElementById('wheel-header');
+        const bar = document.getElementById('wheel-category-bar');
+        if (!header || !bar) return;
+
+        const headerHeight = Math.ceil(header.getBoundingClientRect().height);
+        const barHeight = Math.ceil(bar.getBoundingClientRect().height);
+
+        document.documentElement.style.setProperty('--wheel-header-h', `${headerHeight}px`);
+        document.documentElement.style.setProperty('--wheel-bar-h', `${barHeight}px`);
+      }
+
       // Scroll detection for category bar highlighting
       function updateCategoryBar() {
         const sections = document.querySelectorAll('[data-category]');
@@ -273,7 +277,12 @@
       }
       
       window.addEventListener('scroll', updateCategoryBar);
-      document.addEventListener('DOMContentLoaded', updateCategoryBar);
+      window.addEventListener('resize', syncWheelOffsets);
+      window.addEventListener('load', syncWheelOffsets);
+      document.addEventListener('DOMContentLoaded', () => {
+        syncWheelOffsets();
+        updateCategoryBar();
+      });
     </script>
   </body>
 </html>
