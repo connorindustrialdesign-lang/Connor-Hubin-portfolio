@@ -163,7 +163,10 @@
       }
       
       .cat-card.design-project .design-project-title {
-        position: relative;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         z-index: 1;
         display: block;
         padding: 22px;
@@ -258,9 +261,9 @@
 
       <!-- ENGINEERING SECTION -->
       <section class="category-section" id="engineering" data-category="engineering">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-          <div style="display: grid; grid-template-columns: 1fr; gap: 22px;">
-            <a class="cat-card shope-project" href="shope-concrete-detail.html" style="grid-column: 1 / -1; border-radius: 12px; text-decoration: none; color: inherit;">
+        <section class="portfolio" style="max-width: 1200px; margin: 0 auto; padding: 20px 20px 60px;">
+          <div class="grid">
+            <a class="tile cat-card shope-project" href="shope-concrete-detail.html" style="grid-column: 1 / -1; aspect-ratio: 4 / 1;">
               <div class="shope-project-content">
                 <img src="assets/images/shope/company/Header-Logo-display.png" srcset="assets/images/shope/company/Header-Logo-display@2x.png 2x" alt="Shope Concrete Products" class="shope-project-logo">
                 <svg class="shope-project-icon" viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg">
@@ -285,11 +288,11 @@
               </div>
             </a>
 
-            <a class="cat-card design-project" href="engineering-design-1-2-detail.html" style="grid-column: 1 / -1; background-image: url('assets/images/engineering 1 & 2/heroselection-background-display.jpg'); border-radius: 12px; display: block; text-decoration: none; color: inherit; position: relative; overflow: hidden;">
+            <a class="tile cat-card design-project" href="engineering-design-1-2-detail.html" style="grid-column: 1 / -1; aspect-ratio: 4 / 1; background-image: url('assets/images/engineering 1 & 2/heroselection-background-display.jpg'); background-size: cover; background-position: center; position: relative;">
               <div class="design-project-title">Engineering Design 1 &amp; 2</div>
             </a>
           </div>
-        </div>
+        </section>
       </section>
 
       <!-- FABRICATION SECTION -->
