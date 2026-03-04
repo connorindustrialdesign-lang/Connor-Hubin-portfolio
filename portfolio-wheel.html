@@ -110,7 +110,11 @@
       
       .category-section { 
         scroll-margin-top: calc(var(--wheel-header-h) + var(--wheel-bar-h) + 12px);
-        padding: 40px 0;
+        margin-bottom: 80px;
+      }
+      
+      .category-section:last-of-type {
+        margin-bottom: 0;
       }
       
       /* Engineering section full-width cards */
@@ -381,7 +385,7 @@
 
       // Scroll detection for category bar highlighting
       function updateCategoryBar() {
-        const sections = document.querySelectorAll('[data-category]');
+        const sections = document.querySelectorAll('section[data-category]');
         const categoryLinks = document.querySelectorAll('.category-bar [data-category]');
         
         let currentCategory = 'industrial-design';
