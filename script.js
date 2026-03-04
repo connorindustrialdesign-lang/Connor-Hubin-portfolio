@@ -129,18 +129,16 @@ function initCategoryBarMode() {
     if (!categoryBar) return;
 
     const barContent = categoryBar.querySelector('.category-bar-content') || categoryBar;
-    const allowedHrefs = [
-      'industrial-design.html',
-      'engineering.html',
-      'fabrication.html',
-      'fine-arts.html',
-      'about.html'
-    ];
 
+    // Keep links to portfolio-wheel.html with anchors
     const links = Array.from(barContent.querySelectorAll('a'));
     links.forEach((link) => {
       const href = (link.getAttribute('href') || '').trim();
-      if (!allowedHrefs.includes(href) && !link.classList.contains('category-logo')) {
+      // Keep category links (portfolio-wheel.html#...), about, and logo
+      const shouldKeep = href.includes('portfolio-wheel.html#') || 
+                        href === 'about.html' || 
+                        link.classList.contains('category-logo');
+      if (!shouldKeep) {
         link.remove();
       }
     });
