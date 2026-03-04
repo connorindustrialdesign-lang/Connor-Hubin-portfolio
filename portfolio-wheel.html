@@ -375,15 +375,7 @@
         if (isAutoScrolling) return;
 
         const currentScrollY = window.scrollY;
-        const scrollingUp = currentScrollY < lastScrollY;
         
-        // Only prevent scrolling up past the top (to Fine Arts) when locked and at very top
-        if (!wheelUnlocked && scrollingUp && currentScrollY < 50) {
-          window.scrollTo(0, 0);
-          lastScrollY = 0;
-          return;
-        }
-
         // Check if we've reached the bottom of Fine Arts section
         const fineArtsSection = document.getElementById('fine-arts');
         if (fineArtsSection) {
