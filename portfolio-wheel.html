@@ -398,6 +398,21 @@
         });
       }
       
+      // Scroll to hash anchor on page load
+      function scrollToHash() {
+        const hash = window.location.hash.slice(1); // Remove the # character
+        if (!hash) return;
+        
+        const section = document.getElementById(hash);
+        if (!section) return;
+        
+        // Use setTimeout to ensure layout is complete before scrolling
+        setTimeout(() => {
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          updateCategoryBar();
+        }, 100);
+      }
+      
       window.addEventListener('scroll', () => {
         syncWheelOffsets();
         updateCategoryBar();
@@ -407,7 +422,10 @@
       document.addEventListener('DOMContentLoaded', () => {
         syncWheelOffsets();
         updateCategoryBar();
+        scrollToHash();
       });
+      // Also handle hash changes if user clicks category links
+      window.addEventListener('hashchange', scrollToHash);
     </script>
   </body>
 </html>
