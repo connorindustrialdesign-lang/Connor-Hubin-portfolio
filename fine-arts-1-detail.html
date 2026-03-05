@@ -7,83 +7,78 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <style>
-        .project-gallery {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            padding: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .gallery-item {
-            aspect-ratio: 1;
-            overflow: visible;
-            border-radius: 8px;
-            background: #f5f5f5;
+        .painting-gallery {
             display: flex;
-            align-items: center;
             justify-content: center;
-            min-height: 300px;
+            align-items: center;
+            min-height: 80vh;
+            padding: 120px 40px;
+            background: #fafaf8;
         }
 
-        .gallery-item img {
+        .painting-frame {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .painting-container {
+            background: white;
+            padding: 60px;
+            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.15);
+            max-width: 700px;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+        }
+
+        .painting-image {
+            width: 100%;
+            height: auto;
             display: block;
+            background: linear-gradient(135deg, #355c7d 0%, #6c5b7b 50%, #c06c84 100%);
+            aspect-ratio: 1;
+            border-radius: 4px;
         }
 
-        .gallery-item.placeholder {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            font-weight: 600;
+        .gallery-label {
+            margin-top: 40px;
             text-align: center;
-            padding: 20px;
+            max-width: 600px;
         }
 
-        .project-header {
-            padding: 60px 40px 40px;
-            text-align: center;
-        }
-
-        .project-header h1 {
-            font-size: 48px;
-            margin: 0 0 10px 0;
+        .gallery-label h2 {
+            font-size: 24px;
+            margin: 0 0 8px 0;
             font-weight: 700;
+            color: #1a1a1a;
         }
 
-        .project-header p {
-            font-size: 18px;
+        .gallery-label p {
+            font-size: 14px;
             color: #666;
+            line-height: 1.6;
             margin: 0;
         }
 
-        .back-link {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #000;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
-            font-size: 14px;
-            margin: 40px;
-            transition: background 0.3s;
+        .project-gallery {
+            display: none;
         }
 
-        .back-link:hover {
-            background: #333;
+        .project-header p {
+            display: none;
         }
 
         @media (max-width: 768px) {
-            .project-gallery {
-                grid-template-columns: 1fr;
-                gap: 12px;
-                padding: 20px;
+            .painting-gallery {
+                padding: 80px 20px;
+                min-height: auto;
             }
 
-            .project-header h1 {
-                font-size: 32px;
+            .painting-container {
+                padding: 40px;
+            }
+
+            .gallery-label h2 {
+                font-size: 20px;
             }
         }
     </style>
@@ -105,16 +100,28 @@
     </header>
 
     <nav class="category-bar" aria-label="Top categories">
-        <a href="index.html#industrial-design">Industrial Design</a>
-        <a href="index.html#engineering">Engineering</a>
-        <a href="index.html#fabrication">Fabrication</a>
-        <a href="index.html#fine-arts">Fine Arts</a>
+        <a href="portfolio-wheel.html#industrial-design">Industrial Design</a>
+        <a href="portfolio-wheel.html#engineering">Engineering</a>
+        <a href="portfolio-wheel.html#fabrication">Fabrication</a>
+        <a href="portfolio-wheel.html#fine-arts">Fine Arts</a>
     </nav>
 
     <div class="project-header">
-        <a href="index.html#fine-arts" class="back-link">← Back to Fine Arts</a>
-        <h1>Fine Arts Project 1</h1>
+        <a href="portfolio-wheel.html#fine-arts" class="back-link">← Back to Fine Arts</a>
+        <h1>CTE Pack</h1>
         <p>Artistic exploration</p>
+    </div>
+
+    <div class="painting-gallery">
+        <div class="painting-frame">
+            <div class="painting-container">
+                <div class="painting-image"></div>
+            </div>
+            <div class="gallery-label">
+                <h2>CTE Pack</h2>
+                <p>Sandblast 0.5" &amp; 0.25" plywood, zinc fasteners, nylon, and 0.125" cork sheet</p>
+            </div>
+        </div>
     </div>
 
     <div class="project-gallery">
