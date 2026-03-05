@@ -30,9 +30,14 @@
         width: 100%;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 80px;
-        align-items: end;
+        grid-template-columns: auto 1fr 1.2fr;
+        gap: 60px;
+        align-items: flex-end;
+      }
+      
+      .hero-project-button-col {
+        display: flex;
+        align-items: flex-end;
       }
       
       .hero-project-image a {
@@ -54,12 +59,12 @@
       }
       
       .hero-project-text {
-        font-size: 80px;
+        font-size: 48px;
         font-weight: 700;
         letter-spacing: -2px;
         color: #1a1a1a;
         line-height: 1.1;
-        padding-bottom: 20px;
+        padding-bottom: 0;
         display: flex;
         flex-direction: column;
       }
@@ -67,27 +72,30 @@
       .gallery-caption {
         font-size: 18px;
         color: #444;
-        margin-top: 8px;
+        margin-top: 16px;
+        margin-bottom: 0;
         line-height: 1.6;
         font-weight: 500;
-        max-width: 300px;
+        max-width: 280px;
       }
       
       .projects-button {
-        display: inline-block;
-        margin-top: 20px;
-        padding: 18px 42px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 22px 48px;
         background: #1a1a1a;
         color: #fff;
         text-decoration: none;
         font-weight: 600;
-        font-size: 18px;
+        font-size: 20px;
         letter-spacing: 0.5px;
         border-radius: 8px;
         transition: background 0.3s ease, transform 0.2s ease;
         border: none;
         cursor: pointer;
         width: fit-content;
+        margin-top: 0;
       }
       
       .projects-button:hover {
@@ -102,8 +110,12 @@
         }
         
         .hero-project-text {
-          font-size: 60px;
+          font-size: 48px;
           padding-bottom: 0;
+        }
+        
+        .hero-project-button-col {
+          align-items: flex-start;
         }
       }
       
@@ -114,7 +126,12 @@
         }
         
         .hero-project-text {
-          font-size: 48px;
+          font-size: 40px;
+        }
+        
+        .projects-button {
+          font-size: 18px;
+          padding: 18px 42px;
         }
       }
     </style>
@@ -145,15 +162,17 @@
     <main>
       <section class="hero-project" aria-label="Featured project">
         <div class="hero-project-wrapper">
-          <div class="hero-project-image">
-            <a href="project-a-detail.html">
-              <img src="assets/images/project-a-dimmed-bg.jpg" alt="Project A">
-            </a>
+          <div class="hero-project-button-col">
+            <a href="portfolio-wheel.html#industrial-design" class="projects-button">Portfolio</a>
           </div>
           <div class="hero-project-text">
             CTE Pack
             <div class="gallery-caption">Sandblast 0.5" &amp; 0.25" plywood, zinc fasteners, nylon, and 0.125" cork sheet</div>
-            <a href="portfolio-wheel.html#industrial-design" class="projects-button">Portfolio</a>
+          </div>
+          <div class="hero-project-image">
+            <a href="project-a-detail.html">
+              <img src="assets/images/project-a-dimmed-bg.jpg" alt="Project A">
+            </a>
           </div>
         </div>
       </section>
