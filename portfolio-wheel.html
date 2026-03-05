@@ -385,7 +385,7 @@
 
       // Scroll detection for category bar highlighting
       function updateCategoryBar() {
-        const sections = document.querySelectorAll('section[data-category]');
+        const sections = document.querySelectorAll('section.category-section[data-category]');
         const categoryLinks = document.querySelectorAll('.category-bar [data-category]');
         
         let currentCategory = 'industrial-design';
@@ -401,6 +401,7 @@
         
         // Debug logging
         console.log('Current category:', currentCategory);
+        console.log('Sections found:', sections.length);
         
         categoryLinks.forEach(link => {
           link.classList.remove('active');
