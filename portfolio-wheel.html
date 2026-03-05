@@ -51,7 +51,11 @@
         width: 100%;
         height: auto;
         padding: 0;
-        margin: 0;
+        margin: 0 0 60px 0;
+      }
+
+      body[data-page="portfolio-wheel"] .category-section:last-of-type {
+        margin-bottom: 0;
       }
 
       body[data-page="portfolio-wheel"] .portfolio {
@@ -110,11 +114,6 @@
       
       .category-section { 
         scroll-margin-top: calc(var(--wheel-header-h) + var(--wheel-bar-h) + 12px);
-        margin-bottom: 60px;
-      }
-      
-      .category-section:last-of-type {
-        margin-bottom: 0;
       }
       
       /* Engineering section full-width cards */
@@ -385,7 +384,7 @@
 
       // Scroll detection for category bar highlighting
       function updateCategoryBar() {
-        const sections = document.querySelectorAll('[data-category]');
+        const sections = document.querySelectorAll('section.category-section[data-category]');
         const categoryLinks = document.querySelectorAll('.category-bar [data-category]');
         let currentCategory = 'industrial-design';
         
