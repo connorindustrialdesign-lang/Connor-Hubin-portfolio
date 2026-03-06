@@ -29,9 +29,32 @@
       .nav-about { display: inline-flex; align-items: center; justify-content: center; text-decoration: none; color: var(--text); transition: opacity 0.2s ease; }
       .nav-about:hover { opacity: 0.6; }
       .nav-about svg { width: 24px; height: 24px; stroke: var(--text); fill: none; stroke-width: 1.5; }
+      .about-quote {
+        max-width: 700px;
+        margin: 80px auto 60px;
+        text-align: center;
+        padding: 0 20px;
+      }
+      .about-quote blockquote {
+        margin: 0;
+        font-size: 24px;
+        line-height: 1.5;
+        font-style: italic;
+        color: var(--text);
+        margin-bottom: 12px;
+      }
+      .about-quote cite {
+        display: block;
+        font-size: 16px;
+        font-style: normal;
+        color: var(--muted);
+        font-weight: 500;
+      }
       @media (max-width: 768px) {
         .about-header { grid-template-columns: 1fr; gap: 30px; }
         .about-intro h1 { font-size: 36px; }
+        .about-quote blockquote { font-size: 20px; }
+        .about-quote cite { font-size: 14px; }
       }
     </style>
   </head>
@@ -89,6 +112,11 @@
         </p>
       </article>
     </main>
+
+    <div class="about-quote">
+      <blockquote>"Realize everything connects to everything else."</blockquote>
+      <cite>— Leonardo da Vinci</cite>
+    </div>
 
     <footer class="site-footer">
       <div class="container">
