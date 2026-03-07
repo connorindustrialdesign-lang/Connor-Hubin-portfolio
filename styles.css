@@ -51,8 +51,8 @@ body{margin:0;font-family:'Space Grotesk',system-ui,-apple-system,sans-serif;fon
 .site-name a{color:var(--text);text-decoration:none;transition:color .18s ease;}
 .site-name a:focus{outline:2px solid rgba(0,0,0,0.08);outline-offset:4px}
 .header-nav{display:flex;gap:20px;align-items:center}
-.nav-about{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;color:var(--text);transition:opacity 0.2s ease;font-weight:600;font-size:18px}
-.nav-about::before{content:'Details'}
+.nav-about{display:inline-flex;align-items:center;justify-content:center;text-decoration:none;color:var(--text);transition:opacity 0.2s ease;font-weight:600;font-size:0;line-height:1}
+.nav-about::before{content:'Details';font-size:18px;line-height:1}
 .nav-about:hover{opacity:0.6}
 .nav-about svg{display:none}
 .nav-about::after{content:none}
@@ -185,7 +185,8 @@ main{width:100%;margin:0;padding:0}
   /* Responsive header */
   .site-header{padding:16px 0}
   .site-name{font-size:clamp(18px,3vw,28px)}
-  .nav-about{font-size:14px}
+  .nav-about{font-size:0}
+  .nav-about::before{font-size:14px}
 }
 
 /* Extra small phones */
@@ -200,7 +201,8 @@ main{width:100%;margin:0;padding:0}
   /* Hide site header completely on very small screens, show hamburger instead */
   .site-header{padding:12px 0;background:#fafaf8}
   .site-name{font-size:16px}
-  .nav-about{font-size:12px}
+  .nav-about{font-size:0}
+  .nav-about::before{font-size:12px}
 }
 
 /* Category flow section */
