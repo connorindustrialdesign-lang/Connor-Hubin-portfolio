@@ -128,17 +128,24 @@ function initFineArtsCategoryBarSync() {
   const page = (document.body.getAttribute('data-page') || '').toLowerCase();
   if (page !== 'fine-arts') return;
 
+  const currentPath = (window.location.pathname || '').toLowerCase();
+  const isFineArtsDetail = currentPath.includes('fine-arts-') && currentPath.includes('-detail.html');
+  if (!isFineArtsDetail) return;
+
   const header = document.querySelector('.site-header');
   const categoryBar = document.querySelector('.category-bar');
-  if (!header || !categoryBar) return;
+  if (!categoryBar) return;
 
   const syncOffsets = () => {
-    const headerHeight = Math.ceil(header.getBoundingClientRect().height);
     const barHeight = Math.ceil(categoryBar.getBoundingClientRect().height);
 
-    document.documentElement.style.setProperty('--fa-header-h', `${headerHeight}px`);
-    document.documentElement.style.setProperty('--fa-bar-h', `${barHeight}px`);
-    categoryBar.style.top = `${headerHeight}px`;
+    if (header) {
+      header.style.display = 'none';
+    }
+
+    categoryBar.style.top = '0px';
+    categoryBar.style.position = 'fixed';
+    document.body.style.paddingTop = `${barHeight}px`;
   };
 
   syncOffsets();
