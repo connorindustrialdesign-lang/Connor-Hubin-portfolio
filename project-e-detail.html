@@ -159,6 +159,25 @@
             margin-bottom: 10px;
         }
 
+        /* TEMPORARY LABELS FOR PROTOTYPE IMAGES */
+        .grid-item.square {
+            position: relative;
+        }
+
+        .grid-item.square::before {
+            content: attr(data-label);
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(255, 0, 0, 0.85);
+            color: white;
+            font-size: 32px;
+            font-weight: 700;
+            padding: 8px 16px;
+            border-radius: 4px;
+            z-index: 10;
+        }
+
         .image-grid {
             display: grid;
             gap: 30px;
@@ -436,26 +455,26 @@
                 <h2>Prototype</h2>
             </div>
             <div class="image-grid grid-4">
-                <div class="grid-item square"><img src="assets/images/project%20E/proto1.jpg" alt="Prototype 1"><div class="image-caption">PROTO 1</div></div>
-                <div class="grid-item square"><img src="assets/images/project%20E/proto2.jpg" alt="Prototype 2"><div class="image-caption">PROTO 2</div></div>
-                <div class="grid-item square"><img src="assets/images/project%20E/proto3.jpg" alt="Prototype 3"><div class="image-caption">PROTO 3</div></div>
-                <div class="grid-item square"><img src="assets/images/project%20E/proto4.jpg" alt="Prototype 4"><div class="image-caption">PROTO 4</div></div>
-                <div class="grid-item square"><img src="assets/images/project%20E/proto5.jpg" alt="Prototype 5"><div class="image-caption">PROTO 5</div></div>
-                <div class="grid-item square"><img src="assets/images/project%20E/proto6.jpg" alt="Prototype 6"><div class="image-caption">PROTO 6</div></div>
-                <div class="grid-item square"><img src="assets/images/project%20E/proto7.jpg" alt="Prototype 7"><div class="image-caption">PROTO 7</div></div>
-                <div class="grid-item square"><img src="assets/images/project%20E/proto8.jpg" alt="Prototype 8"><div class="image-caption">PROTO 8</div></div>
-                <div class="grid-item square"><img src="assets/images/project%20E/proto9.jpg" alt="Prototype 9"><div class="image-caption">PROTO 9</div></div>
-                <div class="grid-item square"><img src="assets/images/project%20E/proto10.jpg" alt="Prototype 10"><div class="image-caption">PROTO 10</div></div>
-                <div class="grid-item square"><img src="assets/images/project%20E/proto11.jpg" alt="Prototype 11"><div class="image-caption">PROTO 11</div></div>
-                <div class="grid-item square"><img src="assets/images/project%20E/proto12.jpg" alt="Prototype 12"><div class="image-caption">PROTO 12</div></div>
-                <div class="grid-item square"><img src="assets/images/project%20E/proto13.jpg" alt="Prototype 13"><div class="image-caption">PROTO 13</div></div>
-                <div class="grid-item square"><img src="assets/images/project%20E/proto14.jpg" alt="Prototype 14"><div class="image-caption">PROTO 14</div></div>
-                <div class="grid-item square"><img src="assets/images/project%20E/proto15.jpg" alt="Prototype 15"><div class="image-caption">PROTO 15</div></div>
-                <div class="grid-item square"><img src="assets/images/project%20E/proto16.jpg" alt="Prototype 16"><div class="image-caption">PROTO 16</div></div>
-                <div class="grid-item square"><img src="assets/images/project%20E/proto17.jpg" alt="Prototype 17"><div class="image-caption">PROTO 17</div></div>
-                <div class="grid-item square"><img src="assets/images/project%20E/proto18.jpg" alt="Prototype 18"><div class="image-caption">PROTO 18</div></div>
-                <div class="grid-item square"><img src="assets/images/project%20E/proto19.jpg" alt="Prototype 19"><div class="image-caption">PROTO 19</div></div>
-                <div class="grid-item square"><img src="assets/images/project%20E/proto20.jpg" alt="Prototype 20"><div class="image-caption">PROTO 20</div></div>
+                <div class="grid-item square" data-label="1"><img src="assets/images/project%20E/proto1.jpg" alt="Prototype 1"><div class="image-caption">PROTO 1</div></div>
+                <div class="grid-item square" data-label="2"><img src="assets/images/project%20E/proto2.jpg" alt="Prototype 2"><div class="image-caption">PROTO 2</div></div>
+                <div class="grid-item square" data-label="3"><img src="assets/images/project%20E/proto3.jpg" alt="Prototype 3"><div class="image-caption">PROTO 3</div></div>
+                <div class="grid-item square" data-label="4"><img src="assets/images/project%20E/proto4.jpg" alt="Prototype 4"><div class="image-caption">PROTO 4</div></div>
+                <div class="grid-item square" data-label="5"><img src="assets/images/project%20E/proto5.jpg" alt="Prototype 5"><div class="image-caption">PROTO 5</div></div>
+                <div class="grid-item square" data-label="6"><img src="assets/images/project%20E/proto6.jpg" alt="Prototype 6"><div class="image-caption">PROTO 6</div></div>
+                <div class="grid-item square" data-label="7"><img src="assets/images/project%20E/proto7.jpg" alt="Prototype 7"><div class="image-caption">PROTO 7</div></div>
+                <div class="grid-item square" data-label="8"><img src="assets/images/project%20E/proto8.jpg" alt="Prototype 8"><div class="image-caption">PROTO 8</div></div>
+                <div class="grid-item square" data-label="9"><img src="assets/images/project%20E/proto9.jpg" alt="Prototype 9"><div class="image-caption">PROTO 9</div></div>
+                <div class="grid-item square" data-label="10"><img src="assets/images/project%20E/proto10.jpg" alt="Prototype 10"><div class="image-caption">PROTO 10</div></div>
+                <div class="grid-item square" data-label="11"><img src="assets/images/project%20E/proto11.jpg" alt="Prototype 11"><div class="image-caption">PROTO 11</div></div>
+                <div class="grid-item square" data-label="12"><img src="assets/images/project%20E/proto12.jpg" alt="Prototype 12"><div class="image-caption">PROTO 12</div></div>
+                <div class="grid-item square" data-label="13"><img src="assets/images/project%20E/proto13.jpg" alt="Prototype 13"><div class="image-caption">PROTO 13</div></div>
+                <div class="grid-item square" data-label="14"><img src="assets/images/project%20E/proto14.jpg" alt="Prototype 14"><div class="image-caption">PROTO 14</div></div>
+                <div class="grid-item square" data-label="15"><img src="assets/images/project%20E/proto15.jpg" alt="Prototype 15"><div class="image-caption">PROTO 15</div></div>
+                <div class="grid-item square" data-label="16"><img src="assets/images/project%20E/proto16.jpg" alt="Prototype 16"><div class="image-caption">PROTO 16</div></div>
+                <div class="grid-item square" data-label="17"><img src="assets/images/project%20E/proto17.jpg" alt="Prototype 17"><div class="image-caption">PROTO 17</div></div>
+                <div class="grid-item square" data-label="18"><img src="assets/images/project%20E/proto18.jpg" alt="Prototype 18"><div class="image-caption">PROTO 18</div></div>
+                <div class="grid-item square" data-label="19"><img src="assets/images/project%20E/proto19.jpg" alt="Prototype 19"><div class="image-caption">PROTO 19</div></div>
+                <div class="grid-item square" data-label="20"><img src="assets/images/project%20E/proto20.jpg" alt="Prototype 20"><div class="image-caption">PROTO 20</div></div>
             </div>
         </section>
 
