@@ -11,7 +11,6 @@
             background: #fff;
         }
 
-        /* Hero Image - Full Width */
         .project-hero-image {
             width: 100vw;
             margin-left: calc(-50vw + 50%);
@@ -23,10 +22,9 @@
             margin-bottom: 80px;
         }
 
-        /* Project Title Section */
         .project-title-block {
             max-width: 1200px;
-            margin: 0 auto 120px;
+            margin: 0 auto 96px;
             padding: 0 40px;
         }
 
@@ -42,10 +40,9 @@
             font-size: 18px;
             color: #666;
             margin: 0;
-            max-width: 600px;
+            max-width: 700px;
         }
 
-        /* Content Sections */
         .project-content {
             max-width: 1200px;
             margin: 0 auto;
@@ -53,62 +50,79 @@
         }
 
         .project-section {
-            margin-bottom: 140px;
+            margin-bottom: 88px;
         }
 
-        .full-bleed-black {
-            width: 100vw;
-            margin-left: calc(-50vw + 50%);
-            background: #000;
-            padding: 80px 40px;
-            margin-bottom: 120px;
-        }
-
-        .full-bleed-black img {
-            width: 100%;
-            max-width: 1400px;
-            margin: 0 auto;
-            display: block;
-            height: auto;
+        .project-section:last-child {
+            margin-bottom: 56px;
         }
 
         .section-header {
-            margin-bottom: 60px;
+            margin-bottom: 24px;
         }
 
         .section-header h2 {
-            font-size: 44px;
+            font-size: 48px;
             font-weight: 700;
-            margin: 0 0 20px 0;
+            margin: 0 0 14px 0;
             letter-spacing: -1px;
         }
 
         .section-header p {
-            font-size: 16px;
-            color: #666;
-            max-width: 800px;
-            line-height: 1.7;
+            font-size: 19px;
+            font-weight: 500;
+            color: #555;
+            max-width: 820px;
+            line-height: 1.6;
             margin: 0;
         }
 
-        /* Image Layouts */
+        .problem-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 60px;
+            align-items: stretch;
+        }
+
+        .problem-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-right: 20px;
+        }
+
+        .problem-image .image-grid,
+        .problem-image .grid-item {
+            height: 100%;
+        }
+
+        .problem-image img {
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .functions-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .functions-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
         .image-grid {
             display: grid;
             gap: 30px;
-            margin-bottom: 80px;
+            margin-bottom: 0;
         }
 
-        .grid-1 {
-            grid-template-columns: 1fr;
-        }
-
-        .grid-2 {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .grid-3 {
-            grid-template-columns: repeat(3, 1fr);
-        }
+        .grid-1 { grid-template-columns: 1fr; }
+        .grid-2 { grid-template-columns: repeat(2, 1fr); }
+        .grid-3 { grid-template-columns: repeat(3, 1fr); }
 
         .grid-item {
             border-radius: 0;
@@ -122,81 +136,69 @@
             display: block;
         }
 
-        .image-caption {
-            font-size: 11px;
-            font-weight: 700;
-            padding: 8px 12px;
-            background: #e8e8e8;
-            text-align: center;
-            color: #333;
-            letter-spacing: 1px;
-        }
-
-        .grid-item.span-2 {
-            grid-column: span 2;
-        }
-
-        .grid-item.tall {
-            grid-row: span 2;
-        }
-
-        /* Description/Caption Box */
         .section-text {
-            background: #f9f9f9;
-            padding: 50px;
+            background: transparent;
+            padding: 0;
             border-radius: 0;
-            margin-bottom: 80px;
-            max-width: 900px;
+            margin-bottom: 0;
+            max-width: 100%;
         }
 
         .section-text p {
-            font-size: 16px;
-            line-height: 1.8;
+            font-size: 22px;
+            line-height: 1.65;
+            font-weight: 400;
             color: #333;
-            margin: 0 0 16px 0;
+            margin: 0 0 18px 0;
         }
 
         .section-text p:last-child {
             margin-bottom: 0;
         }
 
-        /* Mobile */
+        .functions-list {
+            margin: 0;
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+        .functions-list li {
+            font-size: 22px;
+            line-height: 1.65;
+            font-weight: 500;
+            color: #333;
+            margin-bottom: 14px;
+        }
+
+        .section-showcase {
+            display: grid;
+            gap: 0;
+            margin-bottom: 88px;
+        }
+
+        .section-showcase .grid-row-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0;
+        }
+
+        .section-showcase .grid-item {
+            margin-bottom: 0;
+        }
+
         @media (max-width: 1024px) {
-            .project-hero-image {
-                height: 450px;
-            }
-
-            .project-title-block h1 {
-                font-size: 48px;
-            }
-
-            .project-title-block {
-                padding: 0 30px;
-            }
-
-            .project-content {
-                padding: 0 30px;
-            }
-
-            .section-header h2 {
-                font-size: 36px;
-            }
-
-            .grid-2 {
+            .project-hero-image { height: 450px; }
+            .problem-layout,
+            .functions-layout {
                 grid-template-columns: 1fr;
+                gap: 40px;
             }
-
-            .grid-item.span-2 {
-                grid-column: 1;
-            }
-
-            .grid-item.tall {
-                grid-row: auto;
-            }
-
-            .section-text {
-                padding: 40px;
-            }
+            .problem-content { padding-right: 0; }
+            .project-title-block h1 { font-size: 48px; }
+            .project-title-block,
+            .project-content { padding: 0 30px; }
+            .section-header h2 { font-size: 40px; }
+            .grid-2 { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 768px) {
@@ -204,36 +206,14 @@
                 height: 300px;
                 margin-bottom: 60px;
             }
-
             .project-title-block {
                 margin-bottom: 80px;
                 padding: 0 20px;
             }
-
-            .project-title-block h1 {
-                font-size: 36px;
-            }
-
-            .project-content {
-                padding: 0 20px;
-            }
-
-            .section-header h2 {
-                font-size: 28px;
-            }
-
-            .section-text {
-                padding: 30px;
-            }
-
-            .grid-3 {
-                grid-template-columns: 1fr;
-            }
-
-            .full-bleed-black {
-                padding: 40px 20px;
-                margin-bottom: 80px;
-            }
+            .project-title-block h1 { font-size: 36px; }
+            .project-content { padding: 0 20px; }
+            .section-header h2 { font-size: 32px; }
+            .grid-3 { grid-template-columns: 1fr; }
         }
 
         @media (max-width: 480px) {
@@ -241,53 +221,24 @@
                 height: 240px;
                 margin-bottom: 40px;
             }
-
             .project-title-block {
-                margin-bottom: 60px;
+                margin-bottom: 48px;
                 padding: 0 16px;
             }
-
             .project-title-block h1 {
                 font-size: 24px;
                 margin: 0 0 12px 0;
                 letter-spacing: -1px;
             }
-
-            .project-title-block p {
-                font-size: 14px;
-            }
-
-            .project-content {
-                padding: 0 16px;
-            }
-
-            .project-section {
-                margin-bottom: 80px;
-            }
-
+            .project-title-block p { font-size: 14px; }
+            .project-content { padding: 0 16px; }
+            .project-section { margin-bottom: 60px; }
             .section-header h2 {
-                font-size: 20px;
-                margin-bottom: 20px;
+                font-size: 24px;
+                margin-bottom: 14px;
             }
-
-            .section-text {
-                padding: 20px;
-                margin-bottom: 60px;
-            }
-
-            .image-caption {
-                font-size: 10px;
-                padding: 6px 10px;
-            }
-
-            .full-bleed-black {
-                padding: 30px 16px;
-                margin-bottom: 60px;
-            }
-
-            .grid-item.tall {
-                grid-row: auto;
-            }
+            .section-text p,
+            .functions-list li { font-size: 18px; }
         }
     </style>
 </head>
@@ -308,91 +259,113 @@
     </header>
 
     <nav class="category-bar" aria-label="Top categories">
-        <a href="index.html" class="category-logo">Connor Hubin</a>
         <a href="portfolio-wheel.html#industrial-design" data-category="industrial-design">Industrial Design</a>
         <a href="portfolio-wheel.html#engineering" data-category="engineering">Engineering</a>
         <a href="portfolio-wheel.html#fabrication" data-category="fabrication">Fabrication</a>
         <a href="portfolio-wheel.html#fine-arts" data-category="fine-arts">Fine Arts</a>
     </nav>
 
-    <!-- Hero Image -->
     <div class="project-hero-image"></div>
 
-    <!-- Project Title -->
     <div class="project-title-block">
-        <h1>Project E</h1>
-        <p>An exploration of form and interactive lighting in product design</p>
+        <h1>Nightstand</h1>
+        <p>a bedside object exploring lighting, storage, and tactile interaction</p>
     </div>
 
-    <!-- Content -->
     <div class="project-content">
+        <div class="section-showcase">
+            <div class="grid-row-2">
+                <div class="grid-item"><img src="assets/images/project%20E/section1A.jpg" alt="Section A"></div>
+                <div class="grid-item"><img src="assets/images/project%20E/section1b.jpg" alt="Section B"></div>
+            </div>
+            <div class="grid-item"><img src="assets/images/project%20E/section1c.jpg" alt="Section C"></div>
+        </div>
+
+        <section class="project-section problem-layout">
+            <div class="problem-content">
+                <div class="section-header">
+                    <h2>Problem</h2>
+                </div>
+                <div class="section-text">
+                    <p>Night routines often involve switching between lighting, charging devices, and keeping small objects organized in low-light environments. Nightstand investigates how one form can simplify that interaction while maintaining a calm visual presence in a bedroom space.</p>
+                </div>
+            </div>
+            <div class="problem-image">
+                <div class="image-grid grid-1">
+                    <div class="grid-item">
+                        <img src="assets/images/project%20E/nightstand%201.jpg" alt="Nightstand context view">
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="project-section">
             <div class="section-header">
-                <h2>Concept Development</h2>
-            </div>
-            <div class="section-text">
-                <p>Project E explores the intersection of utility and aesthetic form through a carefully considered design language. The project integrates interactive lighting, form development, and spatial awareness.</p>
+                <h2>Form Development</h2>
             </div>
             <div class="image-grid grid-2">
-                <div class="grid-item"><img src="assets/images/project%20E/CUPVIEW.30.jpg" alt="Cup perspective view"><div class="image-caption">CUP VIEW</div></div>
-                <div class="grid-item"><img src="assets/images/project%20E/TOPVIEW.29.jpg" alt="Top perspective view"><div class="image-caption">TOP VIEW</div></div>
+                <div class="grid-item"><img src="assets/images/project%20E/legshot.26.jpg" alt="Leg detail exploration"></div>
+                <div class="grid-item"><img src="assets/images/project%20E/sidet.27.jpg" alt="Side profile exploration"></div>
+            </div>
+        </section>
+
+        <section class="project-section functions-layout">
+            <div class="functions-content">
+                <div class="section-header">
+                    <h2>Functions</h2>
+                    <p>the essential bedside functions integrated into a single object</p>
+                </div>
+                <div class="section-text">
+                    <ul class="functions-list">
+                        <li>Ambient lighting for night use</li>
+                        <li>Stable top surface for daily items</li>
+                        <li>Compact footprint with clear access</li>
+                        <li>Readable form language in low light</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="functions-image">
+                <img src="assets/images/project%20E/TOPVIEW.29.jpg" alt="Top view of Nightstand">
             </div>
         </section>
 
         <section class="project-section">
             <div class="section-header">
-                <h2>Lighting Integration</h2>
+                <h2>Lighting Behavior</h2>
             </div>
             <div class="section-text">
-                <p>The device features innovative interactive lighting systems that respond to user interaction and environmental conditions. This creates an intuitive interface between the product and its environment.</p>
+                <p>The lighting system is tuned for late-night readability without overwhelming the room. The contrast between lights-on and lights-off states helps communicate control, clarity, and mood.</p>
             </div>
             <div class="image-grid grid-2">
-                <div class="grid-item"><img src="assets/images/project%20E/LIGHTSHINNING.32.jpg" alt="Lights shining detail"><div class="image-caption">LIGHTS ON</div></div>
-                <div class="grid-item"><img src="assets/images/project%20E/LIGHTSOUT.31.jpg" alt="Lights out detail"><div class="image-caption">LIGHTS OFF</div></div>
+                <div class="grid-item"><img src="assets/images/project%20E/LIGHTSOUT.31.jpg" alt="Nightstand lights off"></div>
+                <div class="grid-item"><img src="assets/images/project%20E/LIGHTSHINNING.32.jpg" alt="Nightstand lights on"></div>
             </div>
         </section>
 
         <section class="project-section">
             <div class="section-header">
-                <h2>Platform Assembly</h2>
-            </div>
-            <div class="section-text">
-                <p>The structural platform provides stability and modular expandability. Each component has been carefully engineered to support assembly and disassembly while maintaining visual coherence.</p>
-            </div>
-            <div class="image-grid grid-1">
-                <div class="grid-item"><img src="assets/images/project%20E/PLATEFORM.28.jpg" alt="Platform assembly view"><div class="image-caption">PLATFORM STRUCTURE</div></div>
-            </div>
-        </section>
-
-        <section class="project-section">
-            <div class="section-header">
-                <h2>Detail Study</h2>
-            </div>
-            <div class="section-text">
-                <p>Close-up examination reveals the refined details of the product. Each element has been considered for both form and function, creating a cohesive design narrative.</p>
-            </div>
-            <div class="image-grid grid-2">
-                <div class="grid-item"><img src="assets/images/project%20E/legshot.26.jpg" alt="Leg structure detail"><div class="image-caption">LEG DETAIL</div></div>
-                <div class="grid-item"><img src="assets/images/project%20E/nightstand%201.jpg" alt="Product in context"><div class="image-caption">CONTEXT</div></div>
-            </div>
-        </section>
-
-        <section class="project-section">
-            <div class="section-header">
-                <h2>Final Form</h2>
-            </div>
-            <div class="section-text">
-                <p>The final product represents a complete design solution that balances aesthetic ambition with functional requirements. Multiple viewing angles showcase the design's spatial presence and detail resolution.</p>
+                <h2>Material and Structure</h2>
             </div>
             <div class="image-grid grid-3">
-                <div class="grid-item"><img src="assets/images/project%20E/nightstand%202.jpg" alt="Final view 1"><div class="image-caption">VIEW 1</div></div>
-                <div class="grid-item"><img src="assets/images/project%20E/nightstand%203.jpg" alt="Final view 2"><div class="image-caption">VIEW 2</div></div>
-                <div class="grid-item"><img src="assets/images/project%20E/nightstand%204.jpg" alt="Final view 3"><div class="image-caption">VIEW 3</div></div>
+                <div class="grid-item"><img src="assets/images/project%20E/PLATEFORM.28.jpg" alt="Platform structure"></div>
+                <div class="grid-item"><img src="assets/images/project%20E/CUPVIEW.30.jpg" alt="Cup view detail"></div>
+                <div class="grid-item"><img src="assets/images/project%20E/blackcup.30.jpg" alt="Dark cup view"></div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <div class="section-header">
+                <h2>Final Product</h2>
+            </div>
+            <div class="section-text">
+                <p>The final composition balances utility and atmosphere, showing how the object performs as both practical furniture and a focused lighting element.</p>
+            </div>
+            <div class="image-grid grid-1">
+                <div class="grid-item"><img src="assets/images/project%20E/nightstand%202.jpg" alt="Final Nightstand hero"></div>
             </div>
         </section>
     </div>
 
     <script src="script.js"></script>
-
 </body>
 </html>
