@@ -139,7 +139,12 @@
         aspect-ratio: 4 / 1;
         grid-column: 1 / -1;
         grid-row: 3;
-        width: 100%;
+        width: 100vw;
+        position: relative;
+        left: 50%;
+        right: 50%;
+        margin-left: -50vw;
+        margin-right: -50vw;
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
@@ -151,7 +156,6 @@
         justify-content: center;
         text-decoration: none;
         color: inherit;
-        position: relative;
       }
       
       /* Engineering section full-width cards */
@@ -294,9 +298,11 @@
       @media (max-width: 1024px) {
         .id-project-e-tile {
           aspect-ratio: 3 / 1;
+          width: 100%;
+          left: auto;
+          right: auto;
           margin-left: 0;
           margin-right: 0;
-          width: 100%;
         }
       }
 
@@ -366,18 +372,22 @@
           background-color: #f3f3f3;
           border-radius: 20px;
           overflow: hidden;
-          width: 100%;
-          margin-left: 0;
-          margin-right: 0;
+          width: 100vw;
+          left: 50%;
+          right: 50%;
+          margin-left: -50vw;
+          margin-right: -50vw;
         }
       }
 
       @media (max-width: 767px) {
         .id-project-e-tile {
           aspect-ratio: 2 / 1;
+          width: 100%;
+          left: auto;
+          right: auto;
           margin-left: 0;
           margin-right: 0;
-          width: 100%;
         }
       }
     </style>
