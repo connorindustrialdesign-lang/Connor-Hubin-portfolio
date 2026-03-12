@@ -404,20 +404,14 @@
     </footer>
 
     <script src="script.js"></script>
-      <script>
-        // Force Project E grid image to fill cell on iPad/tablet
-        function setProjectEGridImageStyle() {
-          var img = document.querySelector('.project-e-thumb-img');
-          if (img && window.innerWidth <= 1024) {
-            img.style.width = '100%';
-            img.style.height = '100%';
-            img.style.objectFit = 'cover';
-            img.style.aspectRatio = '1 / 1';
-            img.style.display = 'block';
+      <!-- Cleaned up: JS hack removed, CSS-only fix below -->
+          /* Only affect Project E grid image on iPad/tablet, not desktop */
+          .project-e-thumb-img {
+            width: 100% !important;
+            height: 100% !important;
+            object-fit: cover !important;
+            aspect-ratio: 1 / 1 !important;
+            display: block !important;
           }
-        }
-        window.addEventListener('DOMContentLoaded', setProjectEGridImageStyle);
-        window.addEventListener('resize', setProjectEGridImageStyle);
-      </script>
   </body>
 </html>
