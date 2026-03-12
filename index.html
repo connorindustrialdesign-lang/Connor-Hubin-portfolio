@@ -384,8 +384,8 @@
           <a class="id-thumb" href="project-b-detail.html"><img src="assets/images/project-b.jpg" alt="Project B"></a>
           <a class="id-thumb" href="project-c-detail.html"><img src="assets/images/project-c.jpg" alt="Project C"></a>
           <a class="id-thumb" href="project-d-detail.html"><img src="assets/images/project-d.jpg" alt="Project D"></a>
-          <a class="id-thumb" href="project-e-detail.html"><img src="assets/images/project-e.jpg" alt="Project E"></a>
-                  <a class="id-thumb" href="project-e-detail.html"><img class="project-e-thumb-img" src="assets/images/project-e.jpg?v=20260311d" alt="Project E"></a>
+          <a class="id-thumb" href="project-e-detail.html"><img class="project-e-thumb-img" src="assets/images/project-e.jpg?v=20260311d" alt="Project E"></a>
+              @media (min-width: 769px) and (max-width: 1024px) {
                 .project-e-thumb-img {
                   width: 100% !important;
                   height: 100% !important;
@@ -393,6 +393,7 @@
                   aspect-ratio: 1 / 1 !important;
                   display: block !important;
                 }
+              }
         </div>
       </section>
     </main>
@@ -404,14 +405,5 @@
     </footer>
 
     <script src="script.js"></script>
-      <!-- Cleaned up: JS hack removed, CSS-only fix below -->
-          /* Only affect Project E grid image on iPad/tablet, not desktop */
-          .project-e-thumb-img {
-            width: 100% !important;
-            height: 100% !important;
-            object-fit: cover !important;
-            aspect-ratio: 1 / 1 !important;
-            display: block !important;
-          }
   </body>
 </html>
