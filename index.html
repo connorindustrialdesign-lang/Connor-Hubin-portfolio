@@ -1,3 +1,147 @@
-</html>
-<!-- Force rebuild: homepage grid removed, March 12, 2026 -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Connor Hubin — Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+      body[data-page="home"] {
+        background: #fafaf8;
+        padding-top: 152px;
+      }
+      .hero-project {
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 32px 20px 40px;
+      }
+      .hero-project-wrapper {
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 80px;
+        align-items: center;
+      }
+      .hero-project-image {
+        width: 100%;
+        max-width: 600px;
+      }
+      .hero-project-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        display: block;
+      }
+      .hero-project-text {
+        font-size: 36px;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 12px;
+      }
+      .gallery-caption {
+        font-size: 18px;
+        color: #444;
+        line-height: 1.6;
+        font-weight: 700;
+        letter-spacing: 1.2px;
+        max-width: 500px;
+        margin-bottom: 40px;
+      }
+      .projects-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        padding: 28px 64px;
+        background: #1a1a1a;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 24px;
+        letter-spacing: 0.5px;
+        border-radius: 8px;
+        transition: background 0.3s ease, transform 0.2s ease;
+        border: none;
+        cursor: pointer;
+        width: fit-content;
+        margin-top: 0;
+      }
+      .projects-button:hover {
+        background: #333;
+        transform: translateY(-2px);
+      }
+      @media (max-width: 1024px) {
+        .hero-project-wrapper {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+        .hero-project-text {
+          font-size: 28px;
+        }
+      }
+      @media (max-width: 768px) {
+        .hero-project {
+          padding: 24px 8px 32px;
+        }
+        .hero-project-text {
+          font-size: 22px;
+        }
+        .gallery-caption {
+          font-size: 14px;
+          margin-bottom: 24px;
+        }
+        .projects-button {
+          font-size: 18px;
+          padding: 18px 36px;
+        }
+      }
+    </style>
+  </head>
+  <body data-page="home">
+    <header class="site-header">
+      <div class="header-inner container">
+        <h1 class="site-name"><a href="index.html">Connor Hubin</a></h1>
+        <nav class="header-nav">
+          <a href="about.html" class="nav-about" title="Details">Details</a>
+        </nav>
+      </div>
+    </header>
+    <nav class="category-bar" aria-label="Top categories">
+      <a href="portfolio-wheel.html#industrial-design" data-category="industrial-design">Industrial Design</a>
+      <a href="portfolio-wheel.html#engineering" data-category="engineering">Engineering</a>
+      <a href="portfolio-wheel.html#fabrication" data-category="fabrication">Fabrication</a>
+      <a href="portfolio-wheel.html#fine-arts" data-category="fine-arts">Fine Arts</a>
+    </nav>
+    <main>
+      <section class="hero-project" aria-label="Featured project">
+        <div class="hero-project-wrapper">
+          <div class="hero-project-image project-e-hero-image">
+            <a href="project-a-detail.html">
+              <img class="project-e-hero-img" src="assets/images/project-a.jpg?v=20260311c" alt="Project A">
+            </a>
+          </div>
+          <div class="hero-project-text-button">
+            <div class="hero-project-text">
+              CTE Pack
+            </div>
+            <div class="gallery-caption">Sandeblast 0.5" &amp; 0.25" plywood, zinc fasteners, nylon, and 0.125" cork sheet</div>
+            <div class="hero-project-button-col">
+              <a href="portfolio-wheel.html#industrial-design" class="projects-button">Portfolio</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <p>&copy; <span id="year"></span> Connor Hubin. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+<!-- Force rebuild: homepage restore after truncation, March 12, 2026 -->
 </html>
